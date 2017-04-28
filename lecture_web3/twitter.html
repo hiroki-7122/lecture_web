@@ -127,7 +127,7 @@
     }
     function addtext(){
       $('#comments').prepend('<img src="images/icon.png"><div class="comment-text"><font size=4>brian</font> <font color=gray>@brian_p&d ・1時間前</font><br>'+document.forms.id_form1.id_textBox1.value+'<br><a ><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a><a ><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a><a ><span class="glyphicon glyphicon-heart" aria-hidden="true" onclick="color1()"></span></a></div><hr>');
-      $('#comments').prepend();
+      document.forms.id_form1.id_textBox1.value="";
          }
 
     </script>
