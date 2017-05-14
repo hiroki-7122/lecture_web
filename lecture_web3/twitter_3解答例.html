@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="common_3.css">
+    <!--ブートストラップ-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Twitter</title>
+  </head>
+  <body>
+    <div id="fullview">
+<!--ナビゲーションバー-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-text navbar-left">
+              <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true">ホーム</span></a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-flash" aria-hidden="true">モーメント</span></a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true">通知</span></a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true">メッセージ</span></a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-text navbar-right">
+              <li><input type="text" class="form-control" placeholder="キーワード検索"></li>
+              <li><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></li>
+              <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+              <li><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-edit" aria-hidden="true">ツイート</span></button></li>
+            </ul>
+        </div>
+      </nav>
+
+  <!--左上のプロフィール諸々--><br><br><br><br>
+      <div class="contents">
+          <div id="sidemenu-left">
+            <ul>
+              <li><img src="images/P&D.png"></li>
+              <li style="margin-top:-30px; padding-left:10px;"><img src="images/icon.png" style="border-radius: 20px; width:100px; height:100px;"></li>
+              <li style="margin-top:-65px; padding-left:120px; font-size:20px;">ブライアン<br></li>
+              <li style="padding-left:120px; font-size:20px; color:gray;">@brian_p&d</li>
+            </ul>
+            <ul class="follower-menu">
+              <li><font color="gray">ツイート</font><br>5,000</li>
+              <li><font color="gray">フォロー</font><br>325</li>
+              <li><font color="gray">フォロワー</font><br>349</li>
+            </ul>
+          </div>
+
+          <!--トレンド--><br>
+              <div id="sidemenu-trrend">
+                <ul>
+                  <li><font size=5 color=gray>トレンド</font><br><br></li>
+                  <li><a >#ぴーあんどでー</a><br><font color="gray">2,340件のツイート</font></li>
+                  <li><a >P&D</a><br><font color="gray">5,546件のツイート</font></li>
+                  <li><a >#すていあーz</a><br><font color="gray">5,100件のツイート</font></li>
+                  <li><a >stairs</a><br><font color="gray">3,9930件のツイート</font></li>
+                  <li><a >#まえまえ</a><br><font color="gray">9,120件のツイート</font></li>
+                  <li><a >#前々</a><br><font color="gray">1,632件のツイート</font></li>
+                  <li><a >#だれそれ</a><br><font color="gray">5,3512件のツイート</font></li>
+                  <li><a >#さんざん万</a><br><font color="gray">5,04件のツイート</font></li>
+                </ul>
+              </div>
+      </div>
+
+  <!--真ん中のメインコンテンツ-->
+      <div class="contents">
+          <div id="contents-center">
+              <ul>
+                <li><img src="images/icon.png"></li>
+                <li>
+                  <form name="form1" id="id_form1" action="">
+                  <input name="textBox1" id="id_textBox1" type="text" style="width:420;">
+                   </form>
+                  <!--input  type="text" class="form-control" placeholder="いまどうしてる？" style="width:420px;"--></li>
+                <li><button type="submit" class="btn btn-default" onclick="addtext()"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button></li>
+              </ul>
+              <br><br>
+              <div id="comments">
+                <img src="images/icon.png">
+                <div class="comment-text">
+                  <font size=4>brian</font> <font color=gray>@brian_p&d ・1時間前</font><br>
+                    初めましてブライアンです。九工大にはもういませんが、新入生のみなさんご入学おめでとうございます。ジャパンにはいるので会いたい人はいってくださいね。
+                    <br>
+                    <a ><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+                    <a ><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a>
+                    <a ><span class="glyphicon glyphicon-heart" aria-hidden="true" onclick="color1()"></span></a>
+                </div>
+                <hr>
+              </div>
+          </div>
+      </div>
+
+  <!--右上のオススメユーザー的なやつ-->
+      <div class="contents">
+          <div id="sidemenu-right">
+            <ul>
+              <li><font size=4 color=gray>おすすめユーザー</font><br></li>
+              <li><img src="images/icon.png">
+                <font size=4>brian</font> <font color=gray>@brian_p&d</font>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user" aria-hidden="true">+ フォローする</span></button>
+              </li>
+              <li><img src="images/icon.png">
+                <font size=4>brian</font> <font color=gray>@brian_p&d</font>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user" aria-hidden="true">+ フォローする</span></button>
+              </li>
+              <li><img src="images/icon.png">
+                <font size=4>brian</font> <font color=gray>@brian_p&d</font>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user" aria-hidden="true">+ フォローする</span></button>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <!--jqueryインポート-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--jsファイルインポート-->
+    <script>
+    var i=0;
+    function color1(){
+      var heart=document.getElementsByClassName("glyphicon glyphicon-heart");
+      if(i==0){
+      	heart[0].style.color='red';
+        i=1;
+      }else{
+        heart[0].style.color='rgb(101, 151, 236)';
+        i=0;
+      }
+    }
+    function addtext(){
+      $('#comments').prepend('<img src="images/icon.png"><div class="comment-text"><font size=4>brian</font> <font color=gray>@brian_p&d ・1時間前</font><br>'+document.forms.id_form1.id_textBox1.value+'<br><a ><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a><a ><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></a><a ><span class="glyphicon glyphicon-heart" aria-hidden="true" onclick="color1()"></span></a></div><hr>');
+      document.forms.id_form1.id_textBox1.value="";
+         }
+
+    </script>
+  </body>
+</html>
